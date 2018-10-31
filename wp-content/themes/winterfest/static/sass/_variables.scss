@@ -1,0 +1,35 @@
+// Colors
+$white:             #FFFFFF;
+$light-grey:        #EBEBEB;
+$grey:              #808285;
+$dark-grey:         #4A4A4A;
+$black:             #333333;
+$cream:             #EFE7D8;
+
+$screen:            #C5C1C0;
+$steel:             #0A1612;
+$denim:             #1A2930;
+$marigold:          #F7CE3E;
+// Fonts
+$font-weight-regular:   400;
+$font-weight-bold:      700;
+
+// Transitions
+$snappy: cubic-bezier(0.42, 0, 0.05, 0.99);
+
+// Bootstrap Overrides
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$line-height-base:      1.5;
+$body-color:            $black;
+$enable-rounded:        false;
+$brand-primary:         $denim;
+
+$btn-padding-x:         20px;
+$btn-padding-y:         10px;
