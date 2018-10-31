@@ -169,10 +169,10 @@ class winterfest {
 
     function action_enqueue_scripts() {
         // Header
-        wp_enqueue_script( 'head', get_stylesheet_directory_uri() . '/static/js/build/head.min.js', false, $this->version, false );
+        wp_enqueue_script( 'head', get_stylesheet_directory_uri() . '/static/js/head.min.js', false, $this->version, false );
 
         // Footer
-        wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/static/js/build/main.js', false, $this->version, true );
+        wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/static/js/main.js', false, $this->version, true );
         wp_enqueue_script( 'google-translate', '//translate.google.com/translate_a/element.js?cb=winterfest.init_google_translate_element', array( 'main' ), null, true );
 
         $data = array(
@@ -187,7 +187,6 @@ class winterfest {
 
     function action_enqueue_styles() {
         wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/static/css/main.css', false, $this->version );
-        wp_enqueue_style( 'print', get_stylesheet_directory_uri() . '/static/css/print.css', false, $this->version, 'print' );
         wp_enqueue_style( 'fonts', '//fonts.googleapis.com/css?family=Oswald:300,400,700', false, $this->version );
         // Remove unnecessary styles
         wp_deregister_style( 'contact-form-7' );
@@ -195,7 +194,7 @@ class winterfest {
     }
 
     function action_admin_enqueue_styles() {
-        wp_enqueue_style( 'admin', get_stylesheet_directory_uri() . '/static/css/admin.css', false, $this->version, 'admin' );
+        // wp_enqueue_style( 'admin', get_stylesheet_directory_uri() . '/static/css/admin.css', false, $this->version, 'admin' );
     }
 
     function action_modify_walk_query( $query ) {
