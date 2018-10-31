@@ -16,13 +16,7 @@
         <a class="logo" href="<?php echo site_url( '/' ); ?>">
             <img src="<?php bloginfo('stylesheet_directory'); ?>/static/images/logo-trans.png" alt="">
         </a>
-        <nav class="secondary">
-          <a class="search-toggle"><i class="fa fa-search" aria-hidden="true"></i></a>
-        </nav>
 
-        <nav class="search">
-            <?php get_search_form(); ?>
-        </nav>
           <nav class="primary">
               <div class="primary-nav-wrap">
                   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false ) ); ?>
