@@ -4,11 +4,19 @@ the_post();
 
 get_header();
 
-//$hero_image = get_field('hero_image');
-//$hero_src = wp_get_attachment_image_src($hero_image, 'hero');
+$hero_image = get_field('hero_image');
+$hero_src = wp_get_attachment_image_src($hero_image, 'hero');
 ?>
-<!-- background-image: url(<?php //echo $hero_src[0]; ?>) -->
-<section class="hero-v1">
+<?php
+  if ( have_rows( 'flexible_content' ) ) {
+      while ( have_rows( 'flexible_content' ) ) {
+          the_row();
+          get_template_part( 'partials/' . get_row_layout() );
+      }
+  }
+?>
+
+<!-- <section class="hero-v1" style="background-image: url(<?php //echo $hero_src[0]; ?>)">
   <div class="hero-background"></div>
   <div class="content">
     <div class="container">
@@ -30,7 +38,7 @@ get_header();
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <?php get_footer(); ?>

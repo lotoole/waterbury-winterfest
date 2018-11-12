@@ -27,9 +27,6 @@ class winterfest {
         add_action( 'admin_init',                   array( $this, 'add_editor_styles' ) );
         add_action( 'init',                         array( $this, 'action_register_nav_menus' ) );
         add_action( 'init',                         array( $this, 'action_acf_add_options_page' ) );
-        add_action( 'init',                         array( $this, 'register_post_type_walk' ) );
-        add_action( 'init',                         array( $this, 'register_post_type_team_member' ) );
-        add_action( 'init',                         array( $this, 'register_post_type_tweet' ) );
         add_action( 'init',                         array( $this, 'register_taxonomy_country' ) );
         add_action( 'acf/init',                     array( $this, 'action_acf_init' ) );
         add_action( 'wp_enqueue_scripts',           array( $this, 'action_enqueue_scripts' ) );
@@ -71,78 +68,6 @@ class winterfest {
         if ( function_exists( 'acf_add_options_page' ) ) {
             acf_add_options_page();
         }
-    }
-
-    function register_post_type_walk() {
-       $labels = array(
-           'name'                => 'Walks',
-           'singular_name'       => 'Walk',
-       );
-
-       $args = array(
-           'label'               => 'walk',
-           'labels'              => $labels,
-           'supports'            => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
-           'hierarchical'        => false,
-           'public'              => true,
-           'show_ui'             => true,
-           'show_in_menu'        => true,
-           'show_in_nav_menus'   => true,
-           'menu_position'       => 10,
-           'menu_icon'           => 'dashicons-location-alt',
-           'has_archive'         => false,
-           'capability_type'     => 'page',
-           'rewrite'             => array( 'slug' => 'walk', 'with_front' => false ),
-       );
-
-       register_post_type( 'walk', $args );
-    }
-
-    function register_post_type_team_member() {
-       $labels = array(
-           'name'                => 'Team Members',
-           'singular_name'       => 'Team Member',
-       );
-
-       $args = array(
-           'label'               => 'team_member',
-           'labels'              => $labels,
-           'supports'            => array( 'title', 'editor', 'thumbnail' ),
-           'hierarchical'        => false,
-           'public'              => true,
-           'show_ui'             => true,
-           'show_in_menu'        => true,
-           'menu_position'       => 10,
-           'menu_icon'           => 'dashicons-groups',
-           'has_archive'         => false,
-           'capability_type'     => 'page',
-       );
-
-       register_post_type( 'team_member', $args );
-    }
-
-    function register_post_type_tweet() {
-       $labels = array(
-           'name'                => 'Tweets',
-           'singular_name'       => 'Tweet',
-       );
-
-       $args = array(
-           'label'               => 'tweet',
-           'labels'              => $labels,
-           'supports'            => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
-           'hierarchical'        => false,
-           'public'              => true,
-           'show_ui'             => true,
-           'show_in_menu'        => true,
-           'show_in_nav_menus'   => true,
-           'menu_position'       => 10,
-           'menu_icon'           => 'dashicons-twitter',
-           'has_archive'         => false,
-           'capability_type'     => 'page',
-       );
-
-       register_post_type( 'tweet', $args );
     }
 
     function register_taxonomy_country() {
