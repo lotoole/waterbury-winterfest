@@ -11,7 +11,10 @@
 @import 'bootstrap/scss/tables';
 // @import 'slick.js/slick/slick.scss';
 
+@import 'partials';
 @import 'header';
+@import 'footer';
+@import 'home';
 
 html,
 body {
@@ -19,7 +22,7 @@ body {
     height: 100%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    // font-family: 'Montserrat', sans-serif;
+    font-family: $font-family-body;
 }
 
 img {
@@ -43,9 +46,20 @@ iframe {
 }
 a {
   text-decoration: none !important;
-  color: $marigold;
+  color: $blue;
 }
-
+p.intro {
+  font-size: 20px;
+  line-height: 1.2;
+}
+//button styles
+.btn-primary {
+  color: #fff;
+  background-color: $blue;
+  border-color: $blue;
+  font-size: 12px;
+  padding: 7px 25px;
+}
 // Custom Column Gutters
 .row.gutter-60 {
     margin-right: -30px;

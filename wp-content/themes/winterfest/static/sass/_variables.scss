@@ -2,17 +2,19 @@
 $white:             #FFFFFF;
 $light-grey:        #EBEBEB;
 $grey:              #808285;
-$dark-grey:         #4A4A4A;
+$dark-grey:         #3D3E42;
 $black:             #333333;
-$cream:             #EFE7D8;
 
-$screen:            #C5C1C0;
-$steel:             #0A1612;
-$denim:             #1A2930;
-$marigold:          #F7CE3E;
+$orange:            #B35639;
+$blue:              #2B3990;
+$red:               #8C3636;
+
 // Fonts
 $font-weight-regular:   400;
 $font-weight-bold:      700;
+
+$font-family-headings: Arial, Helvetica, sans-serif;
+$font-family-body: "Times New Roman", Times, serif;
 
 // Transitions
 $snappy: cubic-bezier(0.42, 0, 0.05, 0.99);
@@ -29,7 +31,7 @@ $grid-breakpoints: (
 $line-height-base:      1.5;
 $body-color:            $black;
 $enable-rounded:        false;
-$brand-primary:         $denim;
+$brand-primary:         $orange;
 
 $btn-padding-x:         20px;
 $btn-padding-y:         10px;
