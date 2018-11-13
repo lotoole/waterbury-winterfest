@@ -19,10 +19,15 @@ class winterfest {
 
         add_image_size( 'icon', 60, 60, true );
         add_image_size( 'excerpt', 640, 480, true );
-        add_image_size( 'square', 640, 640, true );
         add_image_size( 'share', 1200, 630, true );
         add_image_size( 'hero', 1280, 1000, true );
         add_image_size( 'section-heading', 1280, 600, true );
+
+        add_image_size( 'square', 640, 640, true );
+        add_image_size('square_two', 500, 500, true);
+        add_image_size('square_three', 400, 400, true);
+        add_image_size('square_four', 300, 300, true);
+        add_image_size('square_six', 200, 200, true);
 
         add_action( 'admin_init',                   array( $this, 'add_editor_styles' ) );
         add_action( 'init',                         array( $this, 'action_register_nav_menus' ) );
