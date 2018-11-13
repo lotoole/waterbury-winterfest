@@ -3,7 +3,6 @@ section.hero-v1 {
   padding: 40px 0;
   text-align: center;
   color: $white;
-  background-image: url('../images/placeholder.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -52,6 +51,46 @@ section.hero-v1 {
   }
 }
 
+section.hero-v2 {
+  position: relative;
+  padding: 60px 0;
+  text-align: left;
+  color: $white;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .hero-background {
+    @include fill;
+    @include cover;
+    z-index: 1;
+    transition: opacity 0.4s;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($black, 0.6);
+    z-index: 2;
+  }
+
+  .content {
+    position: relative;
+    z-index: 3;
+  }
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    color: $white;
+  }
+}
+
 section.three_blocks {
   padding: 40px 0;
 
@@ -80,7 +119,7 @@ section.three_blocks {
 }
 
 section.split-columns {
-  
+
   .content {
     position: relative;
     max-width: 600px;
