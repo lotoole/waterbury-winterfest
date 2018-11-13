@@ -202,10 +202,17 @@ class winterfest {
                 'wrapper' => false,
             ),
             array(
-                'title' => 'Button',
+                'title' => 'Button Regular',
                 'inline' => 'a',
                 'block' => 'a',
                 'classes' => 'btn btn-primary',
+                'wrapper' => false,
+            ),
+            array(
+                'title' => 'Button Orange',
+                'inline' => 'a',
+                'block' => 'a',
+                'classes' => 'btn btn-primary-orange',
                 'wrapper' => false,
             ),
             array(

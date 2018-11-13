@@ -7,7 +7,7 @@ $content_class = 'left' == get_sub_field('alignment') ? 'pull-left' : '';
 
 ?>
 
-<section class="split-columns">
+<section class="split-columns" style="background-color: <?php the_sub_field('color'); ?>;">
     <div class="row no-gutters">
       <div class="<?php echo $content_class; ?> col-md-6">
         <div class="content">

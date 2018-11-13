@@ -68,6 +68,14 @@ p.intro {
   font-size: 12px;
   padding: 7px 25px;
 }
+
+.btn-primary-orange {
+  color: #fff;
+  border-color: $blue;
+  font-size: 12px;
+  padding: 7px 25px;
+  background-color: $orange;
+}
 // Custom Column Gutters
 .row.gutter-60 {
     margin-right: -30px;
