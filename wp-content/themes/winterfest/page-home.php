@@ -18,4 +18,6 @@ $hero_src = wp_get_attachment_image_src($hero_image, 'hero');
 
 
 
+
+
 <?php get_footer(); ?>

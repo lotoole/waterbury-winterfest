@@ -78,3 +78,62 @@ section.three_blocks {
     color: $black;
   }
 }
+
+section.split-columns {
+  background-color: $red;
+  .content {
+    position: relative;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+    color: $white;
+  }
+  .push-left {
+    order: 2;
+  }
+  .pull-left {
+    order: 1;
+  }
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: $white;
+    }
+
+  .image {
+    height: 100%;
+    width: 100%;
+    background: 50% 50% no-repeat;
+    background-size: cover;
+    padding-top: 65%;
+  }
+  @include md {
+    .content {
+      padding: 100px;
+      text-align: left;
+    }
+    .push-left {
+      order: 1;
+    }
+    .pull-left {
+      order: 2;
+    }
+    .image {
+      padding-top: 0;
+    }
+    .faq-promo {
+      flex-direction: row;
+    }
+    .extra-help {
+      p {
+        max-width: 70%;
+      }
+      .numbers {
+        max-width: 70%;
+      }
+    }
+  }
+}
