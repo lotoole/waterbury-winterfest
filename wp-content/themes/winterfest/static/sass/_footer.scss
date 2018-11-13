@@ -5,7 +5,7 @@ footer {
   .content {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     height: 100%;
     width: 100%;
@@ -14,10 +14,11 @@ footer {
   .nav-wrap {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: column;
     height: 100%;
     width: 100%;
+    margin-top: 15px;
   }
 
   span {
@@ -48,6 +49,17 @@ footer {
           color: $orange;
         }
       }
+    }
+  }
+
+  @include md {
+    .content {
+      align-items: flex-start;
+    }
+
+    .nav-wrap {
+      align-items: flex-end;
+      margin-top: 0;
     }
   }
 }
