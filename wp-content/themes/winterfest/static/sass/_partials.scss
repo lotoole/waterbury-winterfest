@@ -51,3 +51,30 @@ section.hero-v1 {
     }
   }
 }
+
+section.three_blocks {
+  padding: 40px 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: $black;
+    text-align: center;
+    margin: 0;
+  }
+
+  h5 {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  i {
+    display: block;
+    text-align: center;
+    font-size: 70px;
+    color: $black;
+  }
+}

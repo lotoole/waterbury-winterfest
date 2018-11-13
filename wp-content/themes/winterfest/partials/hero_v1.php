@@ -1,6 +1,6 @@
 <?php
 
-$hero_image = get_field('hero_image');
+$hero_image = get_sub_field('hero_image');
 $hero_src = wp_get_attachment_image_src($hero_image, 'hero');
 
 ?>
