@@ -1,4 +1,4 @@
-/* global window, console, jQuery, Waypoint, bodymovin, twttr, google */
+/* global window, console, jQuery, Waypoint, bodymovin, twttr, google, masonry */
 
 function debounce( fn, threshold ) {
   var timeout;
@@ -113,6 +113,16 @@ winterfest.init_mobile_nav = function () {
     });
 };
 
+winterfest.init_masonry = function () {
+  var grid = $('.grid');
+  grid.imagesLoaded(function(){
+    grid.masonry({
+      columnWidth: '.grid-sizer',
+      itemSelector: '.grid-item',
+      percentPosition: true
+    });
+  });
+};
 
 winterfest.mq = {
     'sm': '(min-width: 576px)',
@@ -123,4 +133,5 @@ winterfest.mq = {
 
 $(document).ready(function () {
   winterfest.init_mobile_nav();
+  winterfest.init_masonry();
 });
