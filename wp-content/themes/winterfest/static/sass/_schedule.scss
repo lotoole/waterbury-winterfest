@@ -1,0 +1,21 @@
+section.days {
+  position: relative;
+  padding: 40px 0;
+  max-height: 100vh;
+  clear: both;
+  overflow: scroll;
+
+  .hero {
+    background-image: url('../images/placeholder.jpg');
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+
+  .content-wrap {
+    overflow: scroll;
+  }
+}
