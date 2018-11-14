@@ -17,36 +17,20 @@ get_header();
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2>Registration</h2>
-        <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+        <h2><?php the_field('section_title'); ?></h2>
+        <p class="intro"><?php the_field('section_intro'); ?></p>
       </div>
-      <div class="col-md-4">
-        <div class="content">
-          <h4>Broomball</h4>
-          <span>$80/team</span>
-          <span>Saturday</span>
-          <span>Jan 27,10am</span>
-          <a href="#" class="btn btn-primary">Register</a>
+      <?php if( have_rows('event') ): while( have_rows('event') ) : the_row(); ?>
+        <div class="col-md-4">
+          <div class="content">
+            <h4><?php the_sub_field('name'); ?></h4>
+            <span><?php the_sub_field('price'); ?></span>
+            <span><?php the_sub_field('day_of_week'); ?></span>
+            <span><?php the_sub_field('date'); ?></span>
+            <a href="<?php the_sub_field('button_link'); ?>" class="btn btn-primary">Register</a>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="content">
-          <h4>Broomball</h4>
-          <span>$80/team</span>
-          <span>Saturday</span>
-          <span>Jan 27,10am</span>
-          <a href="#" class="btn btn-primary">Register</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="content">
-          <h4>Broomball</h4>
-          <span>$80/team</span>
-          <span>Saturday</span>
-          <span>Jan 27,10am</span>
-          <a href="#" class="btn btn-primary">Register</a>
-        </div>
-      </div>
+      <?php endwhile; endif; ?>
     </div>
   </div>
 </section>
