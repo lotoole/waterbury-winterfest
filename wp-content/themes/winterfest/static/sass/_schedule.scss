@@ -11,10 +11,15 @@ section.days {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+
     width: 100%;
   }
 
   .content-wrap {
     overflow: scroll;
+  }
+
+  .day-two .hero {
+    background-image: url('../images/square-payment.jpg') !important;
   }
 }
