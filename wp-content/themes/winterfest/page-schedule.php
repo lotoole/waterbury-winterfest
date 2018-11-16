@@ -19,117 +19,40 @@ get_header();
       <div class="col-12">
         <h2>Scroll To Day:</h2>
         <ul>
-          <li><a href="#">Day One</a></li>
-          <li><a href="#">Day Two</a></li>
-          <li><a href="#">Day Three</a></li>
-          <li><a href="#">Day Four</a></li>
-          <li><a href="#">Day Five</a></li>
-          <li><a href="#">Day One</a></li>
-          <li><a href="#">Day One</a></li>
-          <li><a href="#">Day One</a></li>
-          <li><a href="#">Day One</a></li>
-          <li><a href="#">Day One</a></li>
+          <?php if( have_rows('days_buttons') ): while( have_rows('days_buttons') ): the_row(); ?>
+              <?php $ID = strtolower(get_sub_field('text')); ?>
+              <li><a href="#<?php echo preg_replace('/\s+/', '', $ID); ?>"><?php the_sub_field('text'); ?></a></li>
+            <?php endwhile; endif; ?>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<?php if( have_rows('day') ): while( have_rows('day') ): the_row(); ?>
+  <?php
+  $image_class = 'right' == get_sub_field('alignment') ? '' : '';
+  $content_class = 'right' == get_sub_field('alignment') ? 'order-last order-md-first' : '';
+  ?>
 <section class="day">
   <div class="container">
     <div class="row">
       <!-- day -->
-      <div class="col-md-6">
-        <div class="day-title">
-          <h3>Day One</h3>
-          <span>1/3/19</span>
-        </div>
+      <div class="<?php echo $content_class; ?> col-md-6">
+        <h3><?php the_sub_field('title'); ?></h3>
+        <?php the_sub_field('events'); ?>
       </div>
-      <div class="col-md-6">
-        <h3>Saturday, January 3rd</h3>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
-        </div>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
-        </div>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
-        </div>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
-        </div>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
+      <div class="<?php echo $image_class; ?> order-first col-md-6">
+        <div class="day-title">
+          <h3><?php the_sub_field('hero_title'); ?></h3>
+          <span><?php the_sub_field('hero_date'); ?></span>
         </div>
       </div>
       <!-- end of day -->
     </div>
   </div>
 </section>
-
-<section class="day">
-  <div class="container">
-    <div class="row">
-      <!-- day -->
-      <div class="col-md-6">
-        <h3>Saturday, January 3rd</h3>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
-        </div>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
-        </div>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
-        </div>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
-        </div>
-        <div class="event">
-          <h5>Opening Ceremony Vehicle Procession</h5>
-          <span>5:30pm</span>
-          <span>GMCR Cafe start</span>
-          <a href="#" class="btn btn-primary">More</a>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="day-title">
-          <h3>Day One</h3>
-          <span>1/3/19</span>
-        </div>
-      </div>
-      <!-- end of day -->
-    </div>
-  </div>
-</section>
+<?php endwhile; endif; ?>
 
 
 <?php get_footer(); ?>
