@@ -41,7 +41,7 @@ section.skip-to {
 
 section.day {
   padding: 40px 0;
-  
+
   .day-title {
     background-image: url('../images/square-payment.jpg');
     background-position: 50% 50%;
@@ -49,6 +49,16 @@ section.day {
     background-size: cover;
     width: 100%;
     height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: $white;
+    padding-left: 40px;
+
+    h3 {
+      color: $white;
+    }
   }
 
   .event {

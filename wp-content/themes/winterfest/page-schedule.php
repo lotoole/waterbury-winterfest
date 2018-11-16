@@ -33,8 +33,9 @@ get_header();
   <?php
   $image_class = 'right' == get_sub_field('alignment') ? '' : '';
   $content_class = 'right' == get_sub_field('alignment') ? 'order-last order-md-first' : '';
+  $ID = strtolower(get_sub_field('hero_title'));
   ?>
-<section class="day">
+<section id="<?php echo preg_replace('/\s+/', '', $ID); ?>" class="day">
   <div class="container">
     <div class="row">
       <!-- day -->
